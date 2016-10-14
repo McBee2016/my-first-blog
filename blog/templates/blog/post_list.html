@@ -7,10 +7,14 @@
             <h3>Data-avontuur</h3>
         </div>
 
-        <div>
-            1e post
-            <p>Dit komt goed uit, ik was toch al van plan een blog te beginnen vanwege mijn switch naar BI/DWH! Handig dat Python ook gebruikt wordt voor BI analytics ;)</p>
-        </div>
+{% for post in posts %}
+
+          <div>
+              <p>published: {{ post.published_date }}</p>
+              <h1><a href="">{{ post.title }}</a></h1>
+              <p>{{ post.text|linebreaksbr }}</p>
+          </div>
+      {% endfor %}
 
         <div>
             2e post
